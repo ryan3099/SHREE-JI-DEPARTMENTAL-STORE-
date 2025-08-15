@@ -16,8 +16,6 @@
     --paper:#fff7d6;           /* soft paper background */
     --white:#ffffff;
   }
-
-  /* Reset-ish */
   *{box-sizing:border-box}
   html,body{margin:0;padding:0}
   body{
@@ -26,130 +24,58 @@
     background:var(--paper);
   }
 
-  /* ====== Header / Nav ====== */
   .topbar{
     background:linear-gradient(90deg,var(--red),var(--red-dark));
-    color:#fff;
-    display:flex;align-items:center;justify-content:center;
+    color:#fff;display:flex;align-items:center;justify-content:center;
     padding:6px 10px;font-size:14px;letter-spacing:.3px
   }
-  .nav{
-    position:sticky;top:0;z-index:50;
-    background:var(--yellow);
-    border-bottom:4px solid var(--red);
-  }
-  .nav-inner{
-    max-width:1200px;margin:0 auto;padding:12px 16px;
-    display:flex;align-items:center;gap:16px;justify-content:space-between;
-  }
-  .brand{
-    display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)
-  }
-  .logo{
-    width:44px;height:44px;border-radius:8px;border:3px solid var(--red);background:#fff;display:grid;place-items:center;font-weight:900;color:var(--red)
-  }
+  .nav{position:sticky;top:0;z-index:50;background:var(--yellow);border-bottom:4px solid var(--red)}
+  .nav-inner{max-width:1200px;margin:0 auto;padding:12px 16px;display:flex;align-items:center;gap:16px;justify-content:space-between}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+  .logo{width:44px;height:44px;border-radius:8px;border:3px solid var(--red);background:#fff;display:grid;place-items:center;font-weight:900;color:var(--red)}
   .brand h1{font-size:20px;margin:0;line-height:1.1;letter-spacing:.4px}
-  .menu{
-    display:flex;gap:18px;align-items:center;
-  }
-  .menu a{
-    text-decoration:none;color:var(--ink);font-weight:700;
-    padding:8px 10px;border-radius:8px
-  }
+  .menu{display:flex;gap:18px;align-items:center}
+  .menu a{text-decoration:none;color:var(--ink);font-weight:700;padding:8px 10px;border-radius:8px}
   .menu a:hover{background:var(--yellow-dark)}
   .burger{display:none;background:transparent;border:none;font-size:28px}
 
-  /* ====== Hero ====== */
   .hero{
     background:
       radial-gradient(1200px 350px at 20% -5%, rgba(255,255,255,.7), transparent 60%),
       linear-gradient(180deg, var(--yellow) 0%, #ffe451 60%, #ffe451 100%);
     border-bottom:6px solid var(--red);
   }
-  .hero-inner{
-    max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;
-    gap:24px;align-items:center;padding:36px 16px;
-  }
-  .badge{
-    display:inline-block;background:var(--red);color:#fff;border-radius:999px;
-    padding:6px 12px;font-weight:700;letter-spacing:.4px
-  }
+  .hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;padding:36px 16px}
+  .badge{display:inline-block;background:var(--red);color:#fff;border-radius:999px;padding:6px 12px;font-weight:700;letter-spacing:.4px}
   .hero h2{margin:10px 0 6px;font-size:42px;line-height:1.1;color:#000}
   .hero p{margin:8px 0 14px;font-size:16px}
-  .cta{
-    display:flex;gap:12px;flex-wrap:wrap;margin-top:6px
-  }
-  .btn{
-    background:var(--red);color:#fff;border:none;border-bottom:4px solid var(--red-dark);
-    padding:12px 16px;border-radius:12px;font-weight:800;letter-spacing:.5px;cursor:pointer
-  }
-  .btn.secondary{
-    background:#fff;color:#000;border:2px solid var(--red);border-bottom-width:4px
-  }
-  .hero-img{
-    width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:16px;border:5px solid var(--red)
-  }
+  .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+  .btn{background:var(--red);color:#fff;border:none;border-bottom:4px solid var(--red-dark);padding:12px 16px;border-radius:12px;font-weight:800;letter-spacing:.5px;cursor:pointer}
+  .btn.secondary{background:#fff;color:#000;border:2px solid var(--red);border-bottom-width:4px}
+  .hero-img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:16px;border:5px solid var(--red)}
 
-  /* ====== Quick Info ====== */
-  .info{
-    max-width:1200px;margin:18px auto;padding:0 16px;
-    display:grid;grid-template-columns:repeat(3,1fr);gap:16px
-  }
-  .card{
-    background:#fff;border-radius:14px;border:3px solid var(--red);
-    padding:16px;box-shadow:0 8px 30px rgba(0,0,0,.08)
-  }
+  .info{max-width:1200px;margin:18px auto;padding:0 16px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .card{background:#fff;border-radius:14px;border:3px solid var(--red);padding:16px;box-shadow:0 8px 30px rgba(0,0,0,.08)}
   .card h3{margin:0 0 8px;font-size:18px;color:var(--red)}
   .mono{font-family:ui-monospace,Consolas,Monaco,monospace}
 
-  /* ====== Categories ====== */
-  .section{
-    max-width:1200px;margin:30px auto;padding:0 16px
-  }
-  .section h2{
-    font-size:28px;margin:0 0 12px;color:#000
-  }
-  .pill{
-    display:inline-block;background:#fff;border:2px dashed var(--red);
-    padding:8px 12px;border-radius:999px;margin:6px 6px 0 0;font-weight:700
-  }
+  .section{max-width:1200px;margin:30px auto;padding:0 16px}
+  .section h2{font-size:28px;margin:0 0 12px;color:#000}
+  .pill{display:inline-block;background:#fff;border:2px dashed var(--red);padding:8px 12px;border-radius:999px;margin:6px 6px 0 0;font-weight:700}
 
-  /* ====== Draggable Gallery ====== */
-  .strip{
-    margin-top:10px;background:#fff;border:3px solid var(--red);
-    border-radius:14px;padding:12px;overflow-x:auto;scroll-snap-type:x mandatory;display:flex;gap:12px;cursor:grab
-  }
-  .tile{
-    flex:0 0 280px;scroll-snap-align:center;position:relative
-  }
-  .tile img{
-    width:100%;height:180px;object-fit:cover;border-radius:12px;border:3px solid var(--red)
-  }
-  .tile span{
-    position:absolute;left:10px;bottom:10px;background:rgba(0,0,0,.65);color:#fff;
-    padding:4px 8px;border-radius:8px;font-size:12px
-  }
+  .strip{margin-top:10px;background:#fff;border:3px solid var(--red);border-radius:14px;padding:12px;overflow-x:auto;scroll-snap-type:x mandatory;display:flex;gap:12px;cursor:grab}
+  .tile{flex:0 0 280px;scroll-snap-align:center;position:relative}
+  .tile img{width:100%;height:180px;object-fit:cover;border-radius:12px;border:3px solid var(--red)}
+  .tile span{position:absolute;left:10px;bottom:10px;background:rgba(0,0,0,.65);color:#fff;padding:4px 8px;border-radius:8px;font-size:12px}
 
-  /* ====== Contact ====== */
-  .contact{
-    background:linear-gradient(180deg, #ffe451, var(--yellow-dark));
-    border-top:6px solid var(--red);border-bottom:6px solid var(--red);
-    margin-top:28px
-  }
-  .contact-inner{
-    max-width:1200px;margin:0 auto;padding:26px 16px;display:grid;gap:16px
-  }
-  .contact-box{
-    background:#fff;border:3px solid var(--red);border-radius:14px;padding:16px
-  }
+  .contact{background:linear-gradient(180deg, #ffe451, var(--yellow-dark));border-top:6px solid var(--red);border-bottom:6px solid var(--red);margin-top:28px}
+  .contact-inner{max-width:1200px;margin:0 auto;padding:26px 16px;display:grid;gap:16px}
+  .contact-box{background:#fff;border:3px solid var(--red);border-radius:14px;padding:16px}
   .contact-box h3{margin:0 0 8px;color:var(--red)}
   .contact-box a{color:var(--red);font-weight:800;text-decoration:none}
 
-  footer{
-    text-align:center;padding:14px;background:var(--red);color:#fff;font-size:14px
-  }
+  footer{text-align:center;padding:14px;background:var(--red);color:#fff;font-size:14px}
 
-  /* ====== Responsive ====== */
   @media (max-width:900px){
     .hero-inner{grid-template-columns:1fr}
     .info{grid-template-columns:1fr}
@@ -160,21 +86,12 @@
 </head>
 <body>
 
-<!-- Top info bar -->
-<div class="topbar">
-  Hot deals every week • Open daily • Fast checkout
-</div>
+<div class="topbar">Hot deals every week • Open daily • Fast checkout</div>
 
-<!-- Navigation -->
 <nav class="nav">
   <div class="nav-inner">
-    <a class="brand" href="#">
-      <div class="logo">SJ</div>
-      <h1>SHREE JI DEPARTMENTAL STORE</h1>
-    </a>
-
+    <a class="brand" href="#"><div class="logo">SJ</div><h1>SHREE JI DEPARTMENTAL STORE</h1></a>
     <button class="burger" aria-label="menu" id="burger">☰</button>
-
     <div class="menu" id="menu">
       <a href="#about">About</a>
       <a href="#categories">Departments</a>
@@ -184,48 +101,31 @@
   </div>
 </nav>
 
-<!-- Hero -->
 <header class="hero" id="about">
   <div class="hero-inner">
     <div>
       <span class="badge">Since • Chatsworth</span>
       <h2>Your Neighborhood Department Store</h2>
-      <p class="mono">
-        DE SOTO AVE UNIT A, CHATSWORTH • Phone: +1 447-288-1516
-      </p>
-      <p>
-        From daily essentials to special finds—sporting goods, hobbies, musical instruments,
-        books and more. Friendly service, fresh stock, and great prices.
-      </p>
+      <p class="mono">DE SOTO AVE UNIT A, CHATSWORTH • Phone: +1 447-288-1516</p>
+      <p>From daily essentials to special finds—sporting goods, hobbies, musical instruments, books and more. Friendly service, fresh stock, and great prices.</p>
       <div class="cta">
         <a href="#categories"><button class="btn">BROWSE DEPARTMENTS</button></a>
         <a href="#contact"><button class="btn secondary">GET IN TOUCH</button></a>
       </div>
     </div>
-
+    <!-- HERO IMAGE UPDATED → Droguerie & Bricolage -->
     <img class="hero-img"
       src="https://static.stacker.com/s3fs-public/styles/1280x720/s3/Untitleddesign17617C.png"
-      alt="Store hero">
+      alt="Droguerie & Bricolage">
   </div>
 </header>
 
-<!-- Quick Info -->
 <section class="info">
-  <div class="card">
-    <h3>Store Address</h3>
-    <p>DE SOTO AVE UNIT A, CHATSWORTH</p>
-  </div>
-  <div class="card">
-    <h3>Call Us</h3>
-    <p class="mono">+1 447-288-1516</p>
-  </div>
-  <div class="card">
-    <h3>Retail Domains</h3>
-    <p>Other Miscellaneous Retailers • Sporting Goods • Hobby • Musical Instruments • Books • Retail</p>
-  </div>
+  <div class="card"><h3>Store Address</h3><p>DE SOTO AVE UNIT A, CHATSWORTH</p></div>
+  <div class="card"><h3>Call Us</h3><p class="mono">+1 447-288-1516</p></div>
+  <div class="card"><h3>Retail Domains</h3><p>Other Miscellaneous Retailers • Sporting Goods • Hobby • Musical Instruments • Books • Retail</p></div>
 </section>
 
-<!-- Categories -->
 <section class="section" id="categories">
   <h2>Departments & Categories</h2>
   <span class="pill">Other Miscellaneous Retailers</span>
@@ -236,34 +136,47 @@
   <span class="pill">Everyday Essentials</span>
 </section>
 
-<!-- Draggable Gallery -->
 <section class="section" id="gallery">
   <h2>Gallery (Drag / Swipe)</h2>
   <div class="strip" id="strip">
+    <!-- BOOKS -->
     <div class="tile">
-      <img src="https://avatars.mds.yandex.net/get-altay/1485972/2a000001693406958ea6e8fd1f29fd1e8a87/XXL_height" alt="Aisles">
-      <span>Bright Aisles</span>
+      <img
+        src="https://imageio.forbes.com/specials-images/imageserve/677ee7a002780db6cc0dfc61/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds"
+        alt="Books section">
+      <span>Books & Media</span>
     </div>
+    <!-- DROGUERIE & BRICOLAGE -->
     <div class="tile">
-      <img src="https://avatars.mds.yandex.net/i?id=d31a682dc994a13f03bc637fb245a437_l-5232364-images-thumbs&ref=rim&n=13&w=2016&h=930" alt="Sporting Goods">
-      <span>Sporting Goods</span>
+      <img
+        src="https://static.stacker.com/s3fs-public/styles/1280x720/s3/Untitleddesign17617C.png"
+        alt="Droguerie & Bricolage">
+      <span>Droguerie & Bricolage</span>
     </div>
+    <!-- SPORT -->
     <div class="tile">
-      <img src="https://avatars.mds.yandex.net/i?id=b8f83bd971f6e919eea95620e474d924_l-5280837-images-thumbs&ref=rim&n=13&w=780&h=1040" alt="Books & Hobbies">
-      <span>Books & Hobbies</span>
+      <img
+        src="https://irmcs.asia/sites/irmcs.dd/files/sporting_goods_pos_systems_3_irmcs_0.jpg"
+        alt="Sporting goods">
+      <span>Sport</span>
     </div>
+    <!-- SPORT GREETING / TAHIYA SPORT -->
     <div class="tile">
-      <img src="https://png.pngtree.com/thumb_back/fh260/background/20230321/pngtree-the-businessman-in-the-spotlight-in-business-concept-businessman-in-the-photo-image_2014697.jpg" alt="Customer Service">
-      <span>Customer Service</span>
+      <img
+        src="https://avatars.mds.yandex.net/get-altay/9830718/2a00000190e50fe01cc3f19d8bce3479faea/orig"
+        alt="Team sport celebration">
+      <span>Sport Celebration</span>
     </div>
+    <!-- CLOTHING -->
     <div class="tile">
-      <img src="https://static.stacker.com/s3fs-public/styles/1280x720/s3/Untitleddesign17617C.png" alt="Front">
-      <span>Front View</span>
+      <img
+        src="https://media.istockphoto.com/id/1065261666/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%BE%D0%B4%D0%B5%D0%B6%D0%B4%D0%B0-%D0%B6%D0%B5%D0%BD%D1%89%D0%B8%D0%BD-%D1%80%D0%B0%D0%B7%D0%BD%D1%8B%D1%85-%D1%86%D0%B2%D0%B5%D1%82%D0%BE%D0%B2-%D0%BD%D0%B0-%D0%B2%D0%B5%D1%88%D0%B0%D0%BB%D0%BA%D0%B0%D1%85-%D0%B2-%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D0%BC%D0%B0%D0%B3%D0%B5-%D1%87%D0%B5%D1%80%D0%BD%D0%B0%D1%8F-%D0%BF%D1%8F%D1%82%D0%BD%D0%B8%D1%86%D0%B0.jpg?s=612x612&w=0&k=20&c=JoTq4eEnbFbh07RkMlsIdhnzs5SQMS8UIMu45BFTHlQ="
+        alt="Clothing department">
+      <span>Clothing</span>
     </div>
   </div>
 </section>
 
-<!-- Contact -->
 <section class="contact" id="contact">
   <div class="contact-inner">
     <div class="contact-box">
@@ -280,9 +193,7 @@
   </div>
 </section>
 
-<footer>
-  © 2025 SHREE JI DEPARTMENTAL STORE — All rights reserved
-</footer>
+<footer>© 2025 SHREE JI DEPARTMENTAL STORE — All rights reserved</footer>
 
 <script>
   // Mobile menu
@@ -297,12 +208,11 @@
     menu.style.borderTop = '3px solid var(--red)';
   });
 
-  // Draggable strip (desktop) + works with native swipe on touch
+  // Draggable strip (desktop) + native swipe on touch
   const strip = document.getElementById('strip');
   let isDown = false, startX, scrollLeft;
   strip.addEventListener('mousedown', (e)=>{
     isDown = true;
-    strip.classList.add('drag');
     startX = e.pageX - strip.offsetLeft;
     scrollLeft = strip.scrollLeft;
   });
@@ -312,7 +222,7 @@
     if(!isDown) return;
     e.preventDefault();
     const x = e.pageX - strip.offsetLeft;
-    const walk = (x - startX) * 1.2; // scroll speed
+    const walk = (x - startX) * 1.2;
     strip.scrollLeft = scrollLeft - walk;
   });
 </script>
